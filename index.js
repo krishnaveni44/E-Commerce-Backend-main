@@ -33,6 +33,12 @@ mongoose
   app.use("/api/orders", orderRoute);
   app.use("/api/checkout", stripeRoute);
 
+  app.get('/', function (request, response)
+  { 
+     response.send('Hello World ✨🎉✨')
+  });  
+  
+
   app.listen(process.env.PORT || 5000, () => {
       console.log("Success 🎄");
   });
